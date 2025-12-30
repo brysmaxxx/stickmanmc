@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(270deg, #ffe600, #ffcc00, #fff176);
+    background-size: 600% 600%;
+    animation: gradientMove 12s ease infinite;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* CONTENUTO */
+.container {
+    z-index: 2;
+    animation: fadeIn 2s ease forwards;
+}
+
+.title-text {
+    font-size: 4.5rem;
+    font-weight: bold;
+    animation: bounceIn 1.5s ease;
+}
+
+.subtitle-text {
+    font-size: 1.6rem;
+    margin-top: 10px;
+    animation: slideUp 1.8s ease;
+}
+
+.version-text {
+    font-size: 1rem;
+    margin-top: 8px;
+    text-decoration: underline;
+    animation: slideUp 2.1s ease;
+}
+
+/* BOTTONE */
+.discord-button {
+    margin-top: 25px;
+    padding: 14px 30px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: white;
+    background: #5865F2;
+    border-radius: 12px;
+    text-decoration: none;
+    display: inline-block;
+    animation: pulse 2s infinite;
+    transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+}
+
+.discord-button:hover {
+    transform: scale(1.1) rotate(-1deg);
+    background: #4752C4;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+}
+
+/* FORME */
+.shape {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.3;
+    animation: float 14s infinite linear;
+}
+
+.shape.one {
+    width: 300px;
+    height: 300px;
+    background: white;
+    top: 10%;
+    left: 5%;
+}
+
+.shape.two {
+    width: 200px;
+    height: 200px;
+    background: #5865F2;
+    bottom: 15%;
+    right: 10%;
+    animation-duration: 18s;
+}
+
+.shape.three {
+    width: 150px;
+    height: 150px;
+    background: black;
+    top: 60%;
+    left: 70%;
+    animation-duration: 22s;
+}
+
+/* PARTICELLE */
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+/* ANIMAZIONI */
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-40px); }
+}
+
+@keyframes bounceIn {
+    0% { transform: scale(0.5); opacity: 0; }
+    60% { transform: scale(1.1); }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes slideUp {
+    from { transform: translateY(30px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(88,101,242,0.7); }
+    70% { box-shadow: 0 0 0 20px rgba(88,101,242,0); }
+    100% { box-shadow: 0 0 0 0 rgba(88,101,242,0); }
+}

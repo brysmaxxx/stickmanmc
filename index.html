@@ -4,63 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>StickManMC - Coming Soon</title>
-    <style>
-        /* Imposta lo sfondo giallo per l'intera pagina */
-        body {
-            background-color: yellow;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            text-align: center;
-            overflow: hidden; /* Nasconde l'animazione finché non è nella viewport */
-        }
-
-        /* Stile per il testo principale "StickManMC" */
-        .title-text {
-            font-size: 4rem;
-            font-weight: bold;
-            color: black;
-            font-family: 'Arial', sans-serif;
-            /* Applica l'animazione 'drop-from-top' della durata di 1.5s */
-            animation: drop-from-top 1.5s forwards ease-out;
-            /* Inizia l'animazione con un ritardo di 0.5s */
-            animation-delay: 0.5s;
-            opacity: 0; /* Inizialmente invisibile */
-        }
-
-        /* Stile per il testo secondario "coming soon" */
-        .subtitle-text {
-            font-size: 1.5rem;
-            color: black;
-            font-family: 'Arial', sans-serif;
-            margin-top: 10px;
-            /* Applica l'animazione 'drop-from-top' della durata di 1.5s */
-            animation: drop-from-top 1.5s forwards ease-out;
-            /* Inizia l'animazione con un ritardo maggiore (2s) */
-            animation-delay: 2s;
-            opacity: 0; /* Inizialmente invisibile */
-        }
-
-        /* Definizione dell'animazione */
-        @keyframes drop-from-top {
-            0% {
-                transform: translateY(-200px); /* Inizia 200px sopra la posizione finale */
-                opacity: 0;
-            }
-            100% {
-                transform: translateY(0); /* Termina nella sua posizione naturale */
-                opacity: 1;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div>
-        <div class="title-text">StickManMC</div>
-        <div class="subtitle-text">coming soon</div>
-    </div>
+
+<canvas id="particles"></canvas>
+
+<div class="shape one"></div>
+<div class="shape two"></div>
+<div class="shape three"></div>
+
+<div class="container">
+    <div class="title-text">StickManMC</div>
+    <div class="subtitle-text">coming soon</div>
+    <div class="version-text">server Minecraft Java Edition 1.21.10</div>
+    <a href="https://discord.gg/DxtYASNTRU"
+       target="_blank"
+       rel="noopener noreferrer"
+       class="discord-button">
+       Discord
+    </a>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
